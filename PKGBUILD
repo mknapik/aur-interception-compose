@@ -7,13 +7,13 @@
 # Other VCS sources are not natively supported by makepkg yet.
 
 # Maintainer: Michal Knapik
-_pkgname=interception-hyper
+_pkgname=interception-compose
 pkgname=${_pkgname}-git # '-bzr', '-git', '-hg' or '-svn'
 pkgver=r2.4fa1e8e
 pkgrel=1
 pkgdesc="Map tab or backslash to Menu/Compose key"
 arch=('x86_64')
-url="https://github.com/mknapik/interception-hyper"
+url="https://github.com/mknapik/interception-compose"
 license=('MIT')
 groups=()
 depends=()
@@ -24,7 +24,7 @@ replaces=()
 backup=()
 options=()
 install=
-source=("$_pkgname::git+https://github.com/mknapik/interception-hyper.git#branch=master")
+source=("$_pkgname::git+https://github.com/mknapik/interception-compose.git#branch=master")
 noextract=()
 md5sums=('SKIP')
 
@@ -43,6 +43,6 @@ package() {
     mkdir -p ${pkgdir}/usr/local/bin
     cmake -Bbuild -H.
     make -C build
-    cp build/hyper ${pkgdir}/usr/local/bin/interception-hyper
+    cp build/compose ${pkgdir}/usr/local/bin/interception-compose
     cp build/caps2leftctrl+esc ${pkgdir}/usr/local/bin/interception-caps2leftctrl+esc
 }
