@@ -9,7 +9,7 @@
 # Maintainer: Michal Knapik
 _pkgname=interception-compose
 pkgname=${_pkgname}-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=r2.4fa1e8e
+pkgver=r3.2863ad0
 pkgrel=1
 pkgdesc="Map tab or backslash to Menu/Compose key"
 arch=('x86_64')
@@ -19,7 +19,7 @@ groups=()
 depends=()
 makedepends=('git' 'cmake' 'gcc') # 'bzr', 'git', 'mercurial' or 'subversion'	
 provides=("${_pkgname}")
-conflicts=("${_pkgnam}")
+conflicts=("${_pkgname}")
 replaces=()
 backup=()
 options=()
